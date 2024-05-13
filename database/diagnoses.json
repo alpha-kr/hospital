@@ -1,0 +1,42 @@
+[
+    {
+        "diagnosis": "Diabetes",
+        "description": "A disease that occurs when your blood glucose, also called blood sugar, is too high."
+    },
+    {
+        "diagnosis": "Hypertension",
+        "description": "A condition in which the force of the blood against the artery walls is too high."
+    },
+    {
+        "diagnosis": "Asthma",
+        "description": "A condition in which a person's airways become inflamed, narrow and swell, and produce extra mucus, which makes it difficult to breathe."
+    },
+    {
+        "diagnosis": "Flu",
+        "description": "A contagious respiratory illness caused by influenza viruses."
+    },
+    {
+        "diagnosis": "Common cold",
+        "description": "A viral infection of your nose and throat (upper respiratory tract)."
+    },
+    {
+        "diagnosis": "Acne",
+        "description": "A skin condition that occurs when your hair follicles become plugged with oil and dead skin cells."
+    },
+    {
+        "diagnosis": "Depression",
+        "description": "A mental health disorder characterized by persistently depressed mood or loss of interest in activities."
+    },
+    {
+        "diagnosis": "Anxiety",
+        "description": "A mental health disorder characterized by feelings of worry, anxiety, or fear that are strong enough to interfere with one's daily activities."
+    },
+    {
+        "diagnosis": "Migraine",
+        "description": "A type of headache characterized by recurrent headaches that are moderate to severe."
+    },
+    {
+        "diagnosis": "Allergies",
+        "description": "A condition in which the immune system reacts abnormally to a foreign substance."
+    }
+]
