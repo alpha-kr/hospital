@@ -26,7 +26,7 @@ class Patient extends Model
 
     protected $casts = [
         'genre' => PatientGenre::class,
-        'published_at' => 'immutable_datetime',
+        'birth_date' => 'date',
     ];
 
     public function newEloquentBuilder($query): PatientQueryBuilder

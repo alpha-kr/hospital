@@ -11,9 +11,10 @@ class TopDiagnosesController extends Controller
 {
     public function __invoke(Request $request)
     {
-        $top = $request->input('top', 10);
-        $startDate = $request->input('start_date', now()->subMonths(6));
-        $endDate = $request->input('end_date', now());
+        $top = $request->input('top') ?? 5;
+
+        $startDate = $request->date('start_date') ?? now()->subMonths(6);
+        $endDate = $request->date('end_date') ?? now();
 
         $topDiagnoses = GetTopDiagnoses::make()
             ->handle($top, $startDate, $endDate);

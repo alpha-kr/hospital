@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use Domain\Assignments\Models\Assignment;
 use Domain\Assignments\Models\Diagnose;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -23,6 +24,16 @@ class DiagnoseSeeder extends Seeder
                 $this->getDiagnoses()
             )
         );
+
+        $diagnoses = Diagnose::all();
+
+        $diagnoses->each(function ($diagnose, $index) {
+            $index++;
+            Assignment::factory($index)->create([
+                'diagnose_id' => $diagnose->id,
+                'date' => now()->subMonth($index),
+            ]);
+        });
     }
 
     public function getDiagnoses() : array{

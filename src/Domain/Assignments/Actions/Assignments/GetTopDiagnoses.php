@@ -21,16 +21,16 @@ class GetTopDiagnoses
             ->select('diagnoses.*', 'assignments.total')
             ->joinSub(
                 Assignment::query()
-                    ->whereBetween('created_at', [$startDate, $endDate])
+                    ->whereBetween('date', [$startDate, $endDate])
                     ->select('diagnose_id', DB::raw('count(*) as total'))
                     ->groupBy('diagnose_id')
-                    ->orderBy('total', 'desc')
-                    ->take($top),
+                    ->orderBy('total', 'desc'),
                 'assignments',
                 function ($join) {
                     $join->on('diagnoses.id', '=', 'assignments.diagnose_id');
                 }
             )
+            ->take($top)
             ->orderBy('assignments.total', 'desc')
             ->get();
     }

@@ -30,7 +30,7 @@ class UpdatePatientData extends Data
         public CarbonImmutable | Optional $birth_date,
         #[Email(), Unique('patients', 'email', ignore: new RouteParameterReference('patient', 'id'))]
         public string | Optional $email,
-        #[MaxDigits(20)]
+        #[Max(20)]
         public string | Optional $phone,
         public PatientGenre | Optional $genre
     ) {
